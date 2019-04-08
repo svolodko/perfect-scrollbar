@@ -766,7 +766,7 @@ var wheel = function(i) {
       deltaX = 0;
       deltaY = e.wheelDelta;
     }
-    console.log('DeltaX = %i, DeltaY = %i', deltaX, deltaY);
+    // avoid changing of both axious at the same time.
     if (deltaX && deltaY) {
       if (deltaX > deltaY) {
         deltaY = 0;
@@ -774,7 +774,7 @@ var wheel = function(i) {
         deltaX = 0;
       }
     }
-    
+
     if (e.shiftKey) {
       // reverse axis with shift key
       return [-deltaY, -deltaX];
