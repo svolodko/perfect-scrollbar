@@ -50,7 +50,7 @@ export default function(i) {
       deltaX = 0;
       deltaY = e.wheelDelta;
     }
-
+    console.log('DeltaX = %i, DeltaY = %i', deltaX, deltaY);
     if (e.shiftKey) {
       // reverse axis with shift key
       return [-deltaY, -deltaX];
